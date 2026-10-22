@@ -38,3 +38,23 @@ for reading in readings:
     else:
         current_streak = 0
 print("Soru 1.2 - En uzun seri:", max_streak)
+
+
+
+# Soru 1.3 - Elle gruplama
+records = [
+    {"student": "Ece", "course": "VTYS"},
+    {"student": "Ali", "course": "Yapay Zeka"},
+    {"student": "Ece", "course": "Yapay Zeka"},
+    {"student": "Can", "course": "VTYS"},
+    {"student": "Ali", "course": "VTYS"},
+    {"student": "Ece", "course": "Robotik"},
+]
+counts = {}
+for record in records:
+    course = record["course"]
+    if course in counts:
+        counts[course] += 1
+    else:
+        counts[course] = 1
+print("Soru 1.3 - Ders sayıları:", counts)
