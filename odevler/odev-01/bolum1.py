@@ -20,3 +20,21 @@ print(result)
 # 5 | 1    | 6     | [7, 9, 5, 1]
 # 6 | 8    | 14    | [7, 9, 5, 1]
 # Beklenen cikti: 14 ve [7, 9, 5, 1]
+
+
+
+
+# Soru 1.2 - En uzun seri
+readings = [18, 21, 23, 25, 24, 26, 27, 19, 20, 22, 23, 24, 25, 26]
+threshold = 22
+
+# Koddan once tahminim: 5
+current_streak = 0
+max_streak = 0
+for reading in readings:
+    if reading >= threshold:
+        current_streak += 1
+        max_streak = max(max_streak, current_streak)
+    else:
+        current_streak = 0
+print("Soru 1.2 - En uzun seri:", max_streak)
